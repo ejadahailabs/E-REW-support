@@ -1,0 +1,60 @@
+name: Bug report
+description: Something behaves incorrectly. Target response — 72 hours.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Target turnaround for a bug fix: 72 hours.**
+
+        The single most useful thing you can give us is the finding REW produced,
+        or the finding it should have produced and did not. E-REW is an evidence
+        tool — a wrong or missing finding is the bug, even when nothing crashed.
+  - type: input
+    id: version
+    attributes:
+      label: E-REW version
+      description: VS Code → Extensions → E-REW, or Help → About.
+      placeholder: "0.2.2"
+    validations: { required: true }
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options: [Linux, macOS, Windows, Other]
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened?
+      description: If it concerns a finding, name the rule and the requirement id.
+    validations: { required: true }
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead?
+    validations: { required: true }
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+    validations: { required: true }
+  - type: textarea
+    id: template
+    attributes:
+      label: Relevant template (optional, and often decisive)
+      description: >
+        E-REW defines no metadata schema — your templates declare the fields and
+        roles. Many "missing check" reports turn out to be an undeclared role,
+        which by design disables the analysis that needs it rather than guessing.
+      render: markdown
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console output (Help → Toggle Developer Tools → Console)
+      render: shell

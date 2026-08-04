@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the User Guide first
+    url: https://github.com/ejadahailabs/E-REW-support/blob/main/USER_GUIDE.md
+    about: Most questions about roles, templates and why a check stood down are answered here.
+  - name: Security vulnerability
+    url: https://github.com/ejadahailabs/E-REW-support/blob/main/SECURITY.md
+    about: Do not open a public issue. Report privately.

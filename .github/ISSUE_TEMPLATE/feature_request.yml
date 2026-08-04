@@ -1,0 +1,36 @@
+name: Feature request
+description: Propose a capability. Target response — one week.
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Target turnaround for complex features and issues: about one week.**
+
+        One question shapes our roadmap more than any other, so we ask it directly.
+  - type: textarea
+    id: question
+    attributes:
+      label: Which engineering question would this let you answer?
+      description: >
+        E-REW exists to make engineering questions deterministically answerable —
+        "what is unproven?", "what does this change reach?". A capability that
+        answers a real question gets built ahead of one that adds a feature.
+      placeholder: "I need to know which safety requirements have no verification evidence at a given commit."
+    validations: { required: true }
+  - type: textarea
+    id: today
+    attributes:
+      label: How do you answer it today?
+      description: Spreadsheet, manual review, another tool, or not at all.
+    validations: { required: true }
+  - type: dropdown
+    id: standard
+    attributes:
+      label: Does a standard require this?
+      options: ["No", "DO-178C", "ISO 26262", "IEC 61508", "ARP4754A", "IEC 62304", "ASPICE", "Other"]
+  - type: textarea
+    id: detail
+    attributes:
+      label: Anything else
