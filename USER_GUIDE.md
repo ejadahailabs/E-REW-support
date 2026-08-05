@@ -199,6 +199,26 @@ bytes, which is what makes it usable as evidence rather than a status update.
 The dashboard shows coverage and quality as gauges and bars. Every number traces to a
 metric an engine emitted; nothing is estimated.
 
+## 9.5 Baselines — "what changed since the review?"
+
+Run **REW: Set Baseline** and name the moment — *SRR*, *PDR*, *v1.0 review*. E-REW
+records the identity of every current finding into `.rew/baseline.json`. **Commit that
+file**: a comparison only counts as evidence once everyone diffs against the same state.
+
+From then on, **REW: Compare With Baseline** answers the review question directly:
+
+```
+--- baseline "PDR" ---
+  new       error  implementation/implements-disputed  REQ-LLR-001  ...
+  resolved  quality|weak-term|REQ-HLR-002|Description
+--- 1 new, 1 resolved ---
+```
+
+Only finding *identities* are stored, never findings themselves — the current run stays
+the only authority on what a finding contains, so a baseline can never present stale
+evidence as current. Resolved entries are therefore shown as keys: the finding no longer
+exists, and E-REW will not invent its old contents.
+
 ## 10. AI (optional)
 
 AI is **off unless you add a key**, and E-REW works completely without it.
