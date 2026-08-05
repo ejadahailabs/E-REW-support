@@ -84,7 +84,7 @@ rew:
     implementedBy: "implements"
 ```
 
-Analysis queries **roles, never field names**. So an organisation whose parent link is
+Analysis queries **roles, never field names**. So an organization whose parent link is
 `satisfies` gets full traceability analysis with no configuration and no release from us.
 
 ### The rule that surprises people
@@ -108,7 +108,7 @@ this product could produce, so silence with a stated reason is the only honest a
 | Fill a link field | Type `REQ` in `uplinks:` and accept a completion — only real IDs are offered |
 | Delete | Right-click → Delete |
 
-**Two safety behaviours you should know about:**
+**Two safety behaviors you should know about:**
 
 - Deleting a requirement that others trace to will **name them** and the button reads
   **Delete and break uplinks**. The broken links then appear as findings. E-REW does
@@ -216,4 +216,4 @@ Check the [Support policy](SUPPORT.md). Bugs: 72-hour target. Complex features: 
 a week.
 
 The most useful report names the finding you got or expected, the requirement id, and
-your template — because your template decides what can be analysed at all.
+your template — because your template decides what can be analyzed at all.
