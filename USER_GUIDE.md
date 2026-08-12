@@ -409,10 +409,12 @@ machine**, which is what lets you commit a captured report and treat the diff as
 input. The human summary — counts, timings, the pass/fail verdict — goes to stderr,
 where it cannot pollute that diff.
 
-**A candidate never fails your build.** A finding inferred from prose matching (§6)
-is clamped below the gate, whatever level you chose. It is shown, never blocking —
-a check that fails builds on inferred prose is a check someone switches off, and it
-takes every real finding with it.
+**A candidate presents at most as a warning.** A finding inferred from prose
+matching (§6) is clamped to no more severe than `warning`, so the default `error`
+gate never fails a build on one — a check that fails builds on inferred prose is a
+check someone switches off, and it takes every real finding with it. If you opt
+into `--gate warning` or `--gate info`, candidates count at their shown severity,
+like any other finding.
 
 ### The GitHub Actions recipe
 
