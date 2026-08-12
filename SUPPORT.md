@@ -8,6 +8,7 @@ wrote the code.
 | Need | Where |
 |---|---|
 | How do I…? | [User Guide](USER_GUIDE.md) |
+| Run the analysis in CI | [User Guide §9.6](USER_GUIDE.md) — the CLI, the gate, a copy-paste workflow |
 | Something is wrong | [Open a bug](https://github.com/ejadahailabs/E-REW-support/issues/new?template=bug_report.yml) |
 | I need a capability | [Request a feature](https://github.com/ejadahailabs/E-REW-support/issues/new?template=feature_request.yml) |
 | Security vulnerability | [SECURITY.md](SECURITY.md) — **never** a public issue |
