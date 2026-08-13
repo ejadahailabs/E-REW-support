@@ -122,7 +122,7 @@ this product could produce, so silence with a stated reason is the only honest a
 Run **REW: Run Analysis** (or let it run automatically). Findings appear as squiggles and
 in the Problems panel.
 
-Eleven engines ship today:
+Twelve engines ship today:
 
 | Engine | Answers |
 |---|---|
@@ -136,6 +136,7 @@ Eleven engines ship today:
 | Security | Which threats are uncountered? |
 | Architecture | What is unallocated? |
 | Consistency | Is the same thing called two things? |
+| Interface | Which requirements depend on an interface, and what breaks if a field changes? |
 | Impact | What does changing this reach? |
 
 **Findings marked as candidates.** Anything derived from prose matching rather than a
@@ -190,6 +191,73 @@ This unlocks drift detection:
 
 Declaring `files:` is what separates the last two. Without it, E-REW cannot tell "removed"
 from "never looked", and says so rather than guessing.
+
+## 8.5 Intelligence layers — concepts, parameters and interfaces (optional)
+
+Three more optional artefacts, each a **Git-tracked file you declare**, let E-REW answer
+questions about your vocabulary and your interfaces. Like everything else here, each layer
+is silent until you declare it: no glossary means no concept findings — not "100 %
+coverage". You add them one at a time, and each works with the others absent.
+
+Every layer draws the same honest line: a **declared** link is a fact and renders as
+established; a link **inferred from prose or spelling** is a *candidate for human
+judgement* and is always marked. Nothing inferred is ever presented as certain, and
+nothing inferred is ever silently written back into your files.
+
+### A glossary — "where does this concept appear?"
+
+Declare `.rew/glossary.md`: one `## Heading` per canonical term, a definition, the
+requirement that defines it, and any alternative spellings.
+
+```markdown
+## Overtemperature
+Aliases: over-temperature, OT
+Defined by: REQ-HLR-001
+
+A declared cell temperature above the protection threshold.
+```
+
+- **What it produces.** Each term becomes a first-class entity. E-REW can then answer
+  *where does "Overtemperature" appear, and which requirement defines it?*
+- **What you must declare.** A heading (the term), a definition (a term with none is just
+  a heading, and is an error), and — for the authoritative link — a `Defined by:` id.
+- **What findings appear.** A malformed glossary is reported with a line number, and the
+  layer stands down rather than guessing. The **defines** link (you named the definer) is
+  a fact; a **prose mention** of the term is a marked candidate, never counted as a
+  certain use.
+
+### A data dictionary — "which spellings are drifting?"
+
+Declare `.rew/data-dictionary.md`: typed parameters — name, type, units, range and any
+declared aliases. This answers the four-conventions problem — `bearingDistance` in the
+code, `bearing_distance` in the interface document, `BearingDistance` in the test harness,
+*Bearing Distance* in the requirements.
+
+- **What it produces.** Each parameter becomes an entity carrying its type/units/range.
+  E-REW answers *where is this parameter defined, used and tested?*
+- **What you must declare.** The parameter name and its definition; aliases are optional.
+- **What findings appear.** A **declared alias** matched in prose is an exact use — a fact.
+  A **code-convention spelling** that folds onto the parameter (only separator style and
+  case differ) is surfaced as a **proposal** — *declare this as an alias if they are the
+  same* — never silently bound. E-REW does not do fuzzy matching: it only ever erases a
+  naming convention, so a proposal is always defensible, and a parameter used nowhere gets
+  an honest empty view, never a fabricated count.
+
+### An interface catalogue — "what breaks if this field changes?"
+
+Declare `.rew/interfaces.json`: your interfaces, their producer and consumer, and each
+message's fields with units and ranges. A requirement links to the interfaces it depends
+on through its **interface role** (§4).
+
+- **What it produces.** Each interface is an entity and each field a citizen you can trace.
+  E-REW answers, for any interface or field, *which requirements depend on it, which tests
+  verify them, and what breaks if it changes?*
+- **What you must declare.** The catalogue, and — on each requirement that depends on an
+  interface — the ICD ids in its interface-role field.
+- **What findings appear.** A requirement naming an interface **no catalogue declares** is
+  a broken link, reported as an error, never dropped. Interfaces declared but used by no
+  requirement, or carrying no fields, are reported as information. With no catalogue the
+  Interface engine (§6) stands down — its counts are **absent, not zero**.
 
 ## 9. Reports and dashboards
 
