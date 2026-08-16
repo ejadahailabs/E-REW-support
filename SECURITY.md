@@ -4,7 +4,7 @@
 
 **Do not open a public issue.**
 
-Email **ejadahailabs@gmail.com** with `[E-REW SECURITY]` in the subject.
+Email **ejadahailabs@gmail.com** with `[Sanad SECURITY]` in the subject.
 
 Include what you found, how to reproduce it, and what an attacker could achieve. If you
 have a proof of concept, include it — we will not treat a good-faith report as an attack.
@@ -19,7 +19,7 @@ We will credit you in the release notes unless you ask us not to.
 
 ## Scope
 
-E-REW runs entirely on your machine and reads your repository. It has no server, no
+Sanad runs entirely on your machine and reads your repository. It has no server, no
 telemetry, and no account.
 
 Especially interesting to us:

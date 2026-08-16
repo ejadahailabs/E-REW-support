@@ -1,16 +1,16 @@
-# Installing E-REW
+# Installing Sanad
 
 The `.vsix` in this folder is the pilot build. Install it from any machine — you
 do not need this repository cloned, just the file.
 
 ## Install
 
-Download `e-rew-0.3.0.vsix`, then either:
+Download `e-rew-0.3.1.vsix`, then either:
 
 **From the command line**
 
 ```
-code --install-extension e-rew-0.3.0.vsix
+code --install-extension e-rew-0.3.1.vsix
 ```
 
 **From inside VS Code** — Extensions view → `...` menu → *Install from VSIX...*
@@ -22,16 +22,16 @@ stays live. This is the single most common reason a fresh install "does nothing"
 ## Verify what you installed
 
 ```
-sha256sum e-rew-0.3.0.vsix
+sha256sum e-rew-0.3.1.vsix
 ```
 
 | Build | SHA-256 |
 |---|---|
-| `e-rew-0.3.0.vsix` | `60c746f180c8fe0d4f02ee56b9e0a0ca4488d98c73df89182646637df8ebfac1` |
+| `e-rew-0.3.1.vsix` | `e08ea8ccc868567e93cc7fb0d83d4972f109bdfae9f3e526ed5ca2975089ed84` |
 
 ## Opening your requirements for the first time
 
-E-REW activates on a folder that contains `.ejadah/rew/`. A folder that has
+Sanad activates on a folder that contains `.ejadah/rew/`. A folder that has
 never been set up will not light up on its own — that is expected, not a broken
 install.
 
@@ -43,11 +43,11 @@ install.
 |---|---|
 | Requirements already exist | **Derive a template from existing requirements** |
 | Starting from nothing | **Create a starter template** |
-| You already have E-REW templates | **Copy templates I already have** |
+| You already have Sanad templates | **Copy templates I already have** |
 
 4. Reload the window when it offers.
 
-Your requirement files are **never rewritten** by setup. E-REW only writes
+Your requirement files are **never rewritten** by setup. Sanad only writes
 `.ejadah/rew/templates/` and `.ejadah/rew/config.yaml`, and only if they do not
 already exist.
 

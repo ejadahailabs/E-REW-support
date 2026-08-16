@@ -1,6 +1,6 @@
 # Support
 
-E-REW is built by **Ejadah AI Labs**, a startup. You will be talking to the people who
+Sanad is built by **Ejadah AI Labs**, a startup. You will be talking to the people who
 wrote the code.
 
 ## Where to go
@@ -28,12 +28,12 @@ changes our ordering.
 
 ## What makes a report fast to fix
 
-E-REW is an evidence tool, so **a wrong or missing finding is a bug even when nothing
+Sanad is an evidence tool, so **a wrong or missing finding is a bug even when nothing
 crashed**. The most useful report names:
 
 1. the finding you got, or the one you expected and did not get;
 2. the requirement id and the rule id;
-3. the **template** — E-REW defines no metadata schema, so your templates decide what
+3. the **template** — Sanad defines no metadata schema, so your templates decide what
    can be analyzed at all.
 
 A large share of "this check is missing" reports turn out to be an **undeclared role**.

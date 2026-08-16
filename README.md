@@ -2,7 +2,7 @@
   <img src="media/ejadah-logo.png" alt="Ejadah AI Labs" width="140">
 </p>
 
-<h1 align="center">E-REW — Support</h1>
+<h1 align="center">Sanad — Support</h1>
 
 <p align="center">
   <strong>Engineering Intelligence. Verified Knowledge. Sustained Value.</strong>
@@ -11,7 +11,7 @@
 ---
 
 This is the public home for **support, issues and documentation** of
-**E-REW — Requirements Engineering Workbench**, by **Ejadah AI Labs**.
+**Sanad — Requirements Engineering Workbench**, by **Ejadah AI Labs**.
 
 The extension's source is proprietary and lives in a private repository. Everything you
 need as a *user* is here, and it is public on purpose: you should never need an account,
@@ -34,7 +34,7 @@ ordering.
 
 ## What makes a report fast to fix
 
-E-REW is an evidence tool, so **a wrong or missing finding is a bug even when nothing
+Sanad is an evidence tool, so **a wrong or missing finding is a bug even when nothing
 crashed**. The most useful report names the finding you got — or the one you expected and
 did not get — the requirement id, and your **template**.
 
