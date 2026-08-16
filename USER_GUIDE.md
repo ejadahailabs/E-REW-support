@@ -23,13 +23,19 @@ Three consequences you will notice immediately:
 
 ## 2. Install
 
-Marketplace, or sideload a `.vsix`:
+Marketplace, or sideload a `.vsix` from [`downloads/`](downloads/):
 
 ```
-code --install-extension e-rew-0.2.2.vsix
+code --install-extension e-rew-0.4.0.vsix
 ```
 
 Open a folder containing requirements. Sanad activates when it finds a REW repository.
+
+> **Update if you are on 0.3.0 or earlier.** Those builds stop working 30 days
+> after you first opened them — they do not degrade, they stop. **0.4.0 removes
+> that timer**; an install now keeps working. Nothing you created is affected
+> either way: your requirements are Markdown files in your own Git repository,
+> and no version has ever touched them on expiry.
 
 ## 3. Your first repository
 
