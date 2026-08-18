@@ -26,7 +26,7 @@ Three consequences you will notice immediately:
 Marketplace, or sideload a `.vsix` from [`downloads/`](downloads/):
 
 ```
-code --install-extension e-rew-0.4.0.vsix
+code --install-extension e-rew-0.5.0.vsix
 ```
 
 Open a folder containing requirements. Sanad activates when it finds a REW repository.

@@ -1,16 +1,16 @@
 # Installing Sanad
 
-The `.vsix` in this folder is the pilot build. Install it from any machine — you
+The newest `.vsix` in this folder is the current build. Install it from any machine — you
 do not need this repository cloned, just the file.
 
 ## Install
 
-Download `e-rew-0.3.1.vsix`, then either:
+Download `e-rew-0.5.0.vsix`, then either:
 
 **From the command line**
 
 ```
-code --install-extension e-rew-0.3.1.vsix
+code --install-extension e-rew-0.5.0.vsix
 ```
 
 **From inside VS Code** — Extensions view → `...` menu → *Install from VSIX...*
@@ -22,12 +22,12 @@ stays live. This is the single most common reason a fresh install "does nothing"
 ## Verify what you installed
 
 ```
-sha256sum e-rew-0.3.1.vsix
+sha256sum e-rew-0.5.0.vsix
 ```
 
 | Build | SHA-256 |
 |---|---|
-| `e-rew-0.3.1.vsix` | `e08ea8ccc868567e93cc7fb0d83d4972f109bdfae9f3e526ed5ca2975089ed84` |
+| `e-rew-0.5.0.vsix` | `1680ba5c29a1715c933e7360a57664cc5c248e731c7c2731db3d4ebee4afc784` |
 
 ## Opening your requirements for the first time
 
