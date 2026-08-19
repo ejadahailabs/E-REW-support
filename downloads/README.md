@@ -30,6 +30,20 @@ sha256sum e-rew-0.5.1.vsix
 | `e-rew-0.5.1.vsix` | `7ce130fd64669da75b041313d265563f7d14f8380382104e37baa452a32b98f2` |
 | `e-rew-0.5.0.vsix` | `1680ba5c29a1715c933e7360a57664cc5c248e731c7c2731db3d4ebee4afc784` |
 
+## Known gaps in 0.5.1 (read before you rely on the release notes)
+
+Four items in the 0.5.1 notes shipped as engines without their user-visible surface
+yet. They are real code and they are tested, but you cannot reach them from the editor:
+
+| Note | What actually works today |
+|---|---|
+| Template change previewed as a schema migration | engine only — no preview in the editor yet |
+| Declare which checks run on which section | in a rule pack's `sections:` YAML — no form yet |
+| Read your own data dictionaries | via `producers.dataDictionary` in `.ejadah/rew/config.yaml` — no UI, no guide page yet |
+| Setup asks where requirements live and what fields mean | setup forecasts which analyses are live, but does not yet ask for paths or field roles |
+
+They complete in the next release. Found in the owner's own test drive, 2026-08-19.
+
 ## Opening your requirements for the first time
 
 Sanad activates on a folder that contains `.ejadah/rew/`. A folder that has
