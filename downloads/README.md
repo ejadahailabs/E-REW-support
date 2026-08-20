@@ -5,12 +5,12 @@ do not need this repository cloned, just the file.
 
 ## Install
 
-Download `e-rew-0.5.1.vsix`, then either:
+Download `e-rew-0.5.2.vsix`, then either:
 
 **From the command line**
 
 ```
-code --install-extension e-rew-0.5.1.vsix
+code --install-extension e-rew-0.5.2.vsix
 ```
 
 **From inside VS Code** — Extensions view → `...` menu → *Install from VSIX...*
@@ -22,27 +22,26 @@ stays live. This is the single most common reason a fresh install "does nothing"
 ## Verify what you installed
 
 ```
-sha256sum e-rew-0.5.1.vsix
+sha256sum e-rew-0.5.2.vsix
 ```
 
 | Build | SHA-256 |
 |---|---|
+| `e-rew-0.5.2.vsix` | `b68f5950cad05c0fb294a51f8666d98228e9e20f564ec1344ead9475670fd239` |
 | `e-rew-0.5.1.vsix` | `7ce130fd64669da75b041313d265563f7d14f8380382104e37baa452a32b98f2` |
 | `e-rew-0.5.0.vsix` | `1680ba5c29a1715c933e7360a57664cc5c248e731c7c2731db3d4ebee4afc784` |
 
-## Known gaps in 0.5.1 (read before you rely on the release notes)
+## Known gaps in 0.5.2
 
-Four items in the 0.5.1 notes shipped as engines without their user-visible surface
-yet. They are real code and they are tested, but you cannot reach them from the editor:
+0.5.2 closed most of 0.5.1's list: the rules form, the migration preview on save,
+inline requirement-type rows, and field-role mapping in setup are now real surfaces.
+Still engine-only or unfinished, completing in the next release:
 
-| Note | What actually works today |
+| Area | State |
 |---|---|
-| Template change previewed as a schema migration | engine only — no preview in the editor yet |
-| Declare which checks run on which section | in a rule pack's `sections:` YAML — no form yet |
-| Read your own data dictionaries | via `producers.dataDictionary` in `.ejadah/rew/config.yaml` — no UI, no guide page yet |
-| Setup asks where requirements live and what fields mean | setup forecasts which analyses are live, but does not yet ask for paths or field roles |
-
-They complete in the next release. Found in the owner's own test drive, 2026-08-19.
+| Template designer form (design a template end to end) | not yet — configuration edits types field by field |
+| Guided setup (artefact checkboxes + paths, relationships UI, per-artefact templates, rules adoption step) | partial — field-role mapping and the relationship map exist; the full guided flow is being built |
+| Declaring your own data-dictionary sources | works via `producers:` in `.ejadah/rew/config.yaml` (documented in the user guide); no form yet |
 
 ## Opening your requirements for the first time
 
