@@ -3,6 +3,20 @@
 The newest `.vsix` in this folder is the current build. Install it from any machine — you
 do not need this repository cloned, just the file.
 
+## Test build (pre-release slot — owner testing only)
+
+`e-rew-test-build.vsix` is the rolling **0.5.3 candidate** built from `main`. It is
+overwritten every bug round; the file name and URL never change. Not a release.
+
+```
+curl -LO https://github.com/ejadahailabs/E-REW-support/raw/main/downloads/e-rew-test-build.vsix
+code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl+Q)
+```
+
+| Built from | Date | SHA-256 |
+|---|---|---|
+| `E-REW@f7f6e79` | 2026-08-21 | `1fe65218a1c08c447db56abfb845b7cd94e3f0358aaf1579bb9fe416240f10f8` |
+
 ## Install
 
 Download `e-rew-0.5.2.vsix`, then either:
