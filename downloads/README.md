@@ -15,7 +15,7 @@ code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl
 
 | Built from | Date | SHA-256 |
 |---|---|---|
-| `E-REW@b4d3389` | 2026-08-22 | `e65b054e2858d107eb68c2de643a82297dd3ef87ed4ff4cd202b6efc68cea907` |
+| `E-REW@4b6d257` | 2026-08-22 | `d2aae35d4ef6131b0520b6dbfac9a11bf5ce9766771ba28ab29a8ace276620c3` |
 
 ## Install
 
