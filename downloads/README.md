@@ -5,7 +5,7 @@ do not need this repository cloned, just the file.
 
 ## Test build (pre-release slot — owner testing only)
 
-`e-rew-test-build.vsix` is the rolling **0.5.3 candidate** built from `main`. It is
+`e-rew-test-build.vsix` is the rolling **pre-release candidate** built from `main`. It is
 overwritten every bug round; the file name and URL never change. Not a release.
 
 ```
@@ -19,12 +19,12 @@ code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl
 
 ## Install
 
-Download `e-rew-0.5.2.vsix`, then either:
+Download `e-rew-0.5.3.vsix`, then either:
 
 **From the command line**
 
 ```
-code --install-extension e-rew-0.5.2.vsix
+code --install-extension e-rew-0.5.3.vsix
 ```
 
 **From inside VS Code** — Extensions view → `...` menu → *Install from VSIX...*
@@ -36,26 +36,30 @@ stays live. This is the single most common reason a fresh install "does nothing"
 ## Verify what you installed
 
 ```
-sha256sum e-rew-0.5.2.vsix
+sha256sum e-rew-0.5.3.vsix
 ```
 
 | Build | SHA-256 |
 |---|---|
+| `e-rew-0.5.3.vsix` | `b0c6c7cc3035890b36898d77dc14a31c1b57fb0acabe349ac4b7bf4c1c65f3ba` |
 | `e-rew-0.5.2.vsix` | `b68f5950cad05c0fb294a51f8666d98228e9e20f564ec1344ead9475670fd239` |
 | `e-rew-0.5.1.vsix` | `7ce130fd64669da75b041313d265563f7d14f8380382104e37baa452a32b98f2` |
 | `e-rew-0.5.0.vsix` | `1680ba5c29a1715c933e7360a57664cc5c248e731c7c2731db3d4ebee4afc784` |
 
-## Known gaps in 0.5.2
+## Known gaps in 0.5.3
 
-0.5.2 closed most of 0.5.1's list: the rules form, the migration preview on save,
-inline requirement-type rows, and field-role mapping in setup are now real surfaces.
-Still engine-only or unfinished, completing in the next release:
+0.5.3 delivered the owner test round: the form is the default reading and editing
+surface (read-only first, Word-style tables and nested lists, EARS patterns,
+on-demand Validate, interactive hovers, the quality score badge). Still
+engine-only or unfinished, completing in a later release:
 
 | Area | State |
 |---|---|
 | Template designer form (design a template end to end) | not yet — configuration edits types field by field |
 | Guided setup (artefact checkboxes + paths, relationships UI, per-artefact templates, rules adoption step) | partial — field-role mapping and the relationship map exist; the full guided flow is being built |
 | Declaring your own data-dictionary sources | works via `producers:` in `.ejadah/rew/config.yaml` (documented in the user guide); no form yet |
+| Workbench v1 configuration layers (product file, artifact_types schema, standards mapping, views) | filed as FEAT-070…080; unbuilt parts appear as visible "Work in progress" panels, never silently |
+| Finding marks inside table cells | the note list under the field carries them; per-character underlines in cells are not drawn |
 
 ## Opening your requirements for the first time
 
