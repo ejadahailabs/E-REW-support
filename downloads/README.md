@@ -15,7 +15,7 @@ code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl
 
 | Built from | Date | SHA-256 |
 |---|---|---|
-| `E-REW@a9e447d` (MAIN — evening build 2: browser Sign-in (auth sso, PKCE) + auth shorthand parse fix (auth: none now works) · Work On… work-item lens (W1) · deriver arming text) | 2026-08-30 | `c76f44f9bc1585686ec3e5278d15d7dad38537f045bda5c7cb82997fe3cc0168` |
+| `E-REW@b8bfcab` (MAIN — connection fix: /v1 path join for bare-origin base URLs (the owner's 405) + verify/gear errors now print METHOD + full URL + plain-English reading) | 2026-08-30 | `df4a15155c0e3b6066c2e806dfcc25bfed5ecf83047befa15adfe6c51d143dbc` |
 
 ## Install
 
