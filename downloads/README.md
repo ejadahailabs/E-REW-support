@@ -15,7 +15,7 @@ code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl
 
 | Built from | Date | SHA-256 |
 |---|---|---|
-| `E-REW@844f83d` (MAIN — loader round: #498 uplinks wrap, #500 finding aggregation, #501 multi-doc YAML, #502 partial load w/ named exclusions) | 2026-08-30 | `356fad16a764c52381a7ff18a2ba5293cbb78ccf03e30b8a8e789a1c8db6257b` |
+| `E-REW@94ecb17` (MAIN — round #497 day build: loader fixes (#498/#500/#501/#502) + real-shape mappings w/ MIN-MAX ranges, struct members, list-under-key (#503) + SW template role scaffolding (#511) + context layer (#513) + Assistant: grounded chat, verify-LLM-connection, proposed edits w/ engine recheck (#512)) | 2026-08-30 | `97b0da4240c099af38a057dad76be4b0e6d084343dffd235e12d238d2a0377d0` |
 
 ## Install
 
