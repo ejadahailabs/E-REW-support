@@ -15,7 +15,7 @@ code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl
 
 | Built from | Date | SHA-256 |
 |---|---|---|
-| `E-REW@1b55c2a` (MAIN — workbench build: assistant as dockable side view w/ connection gear card · proposed edits (re-landed) · auth: none (base-URI-only LLM) · explorer capability switcher) | 2026-08-30 | `aabf8ac3fc36d3a975321b3a52ca0439050e0be4ea8126038f356d4f1f2edbf0` |
+| `E-REW@a9e447d` (MAIN — evening build 2: browser Sign-in (auth sso, PKCE) + auth shorthand parse fix (auth: none now works) · Work On… work-item lens (W1) · deriver arming text) | 2026-08-30 | `c76f44f9bc1585686ec3e5278d15d7dad38537f045bda5c7cb82997fe3cc0168` |
 
 ## Install
 
