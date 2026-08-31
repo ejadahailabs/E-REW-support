@@ -15,8 +15,15 @@ code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl
 
 | Built from | Date | SHA-256 |
 |---|---|---|
-| `E-REW@9556dda` (MAIN — DD term-mapping chain: req name↔SW name↔code↔verification #556 · front matter optional everywhere + all C/C++ swept + .trace YAML reader (entity_id→codeSymbol, upstreams→requirements) #557 · sample-material scrub #558) | 2026-08-31 | `b8a96e3c1bcb5dcde399c1a1485c76548e7c284308ad6f6bb8f23ef4bbd34387` |
-| **RELEASE `sanad-0.6.0.vsix`** (from tag v0.6.0 @ 8bbb0b0 — Marketplace debut build) | 2026-08-31 | `1a2df3c8291b420a17b167de1c9cbddbc91dcce17c928882f86803653c307d24` |
+| `E-REW@569546b` (MAIN — tag `v0.6.0`, re-cut: pre-release fix batch #562–#566 / #569 / #570 · one unconditional activation pass when a workspace opens #566 · CHANGELOG and docs brought in line with post-batch main) | 2026-08-31 | `1ffafc11431cb3ca64cd8f92492a4aaf614f3791862d34486422f5ac24721ea9` |
+| **RELEASE `sanad-0.6.0.vsix`** (from tag v0.6.0 @ 569546b — re-cut; byte-identical to the test-build slot above) | 2026-08-31 | `1ffafc11431cb3ca64cd8f92492a4aaf614f3791862d34486422f5ac24721ea9` |
+
+Superseded builds, kept for the record — **do not install these**:
+
+| Superseded | Date | SHA-256 |
+|---|---|---|
+| `sanad-0.6.0.vsix` first cut (tag v0.6.0 @ 8bbb0b0, before the fix batch) — replaced the same day by the re-cut above | 2026-08-31 | `1a2df3c8291b420a17b167de1c9cbddbc91dcce17c928882f86803653c307d24` |
+| test-build slot `E-REW@9556dda` | 2026-08-31 | `b8a96e3c1bcb5dcde399c1a1485c76548e7c284308ad6f6bb8f23ef4bbd34387` |
 
 ## Install
 
