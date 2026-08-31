@@ -16,6 +16,7 @@ code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl
 | Built from | Date | SHA-256 |
 |---|---|---|
 | `E-REW@9556dda` (MAIN — DD term-mapping chain: req name↔SW name↔code↔verification #556 · front matter optional everywhere + all C/C++ swept + .trace YAML reader (entity_id→codeSymbol, upstreams→requirements) #557 · sample-material scrub #558) | 2026-08-31 | `b8a96e3c1bcb5dcde399c1a1485c76548e7c284308ad6f6bb8f23ef4bbd34387` |
+| **RELEASE `sanad-0.6.0.vsix`** (from tag v0.6.0 @ 8bbb0b0 — Marketplace debut build) | 2026-08-31 | `1a2df3c8291b420a17b167de1c9cbddbc91dcce17c928882f86803653c307d24` |
 
 ## Install
 
