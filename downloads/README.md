@@ -15,7 +15,7 @@ code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl
 
 | Built from | Date | SHA-256 |
 |---|---|---|
-| `E-REW@bab424e` (MAIN — everything in the previous slot #576 · #578 · #579 · #580 · #582 · #586, plus: hover cards are back in pytest files — inside the folders your own verification template declares, a dictionary parameter named in a test shows its card, a requirement id in a `@pytest.mark.verifies(...)` marker shows the requirement card with its four link lanes, and an enum value shows its scope-tiered card. A `.py` file outside your declared verification scope shows nothing, and a name assembled at run time (an f-string) is not in the file so it is not carded #588) | 2026-08-31 | `197f28d003460dad9e40f4b1a8f73ab0a8c867ac10420625de6e0927884d52e0` |
+| `E-REW@c9ac327` (MAIN — everything in the previous slot #576 · #578 · #579 · #580 · #582 · #586 · #588, plus two fixes from your 0.6.0 test round: the spaces around a `:` in a compound name no longer matter — `Masood : Ahmed`, `Masood: Ahmed` and `Masood:Ahmed` all read as the one term you declared, instead of breaking into two wrong cards; a complete name in your dictionary always wins over one Sanad would derive; and two sources spelling the same entry differently now merge into a single parameter, keeping the first source's spelling on the card #591 · pytest files now draw the dotted underline that says a card is there — on exactly the names the hover recognises, inside the folders your verification template declares, and nowhere else #590) | 2026-08-31 | `638f371da61fffe9445e02897c53d1872533cac1d3736b11f683bae8f3c7dc47` |
 | **RELEASE `sanad-0.6.0.vsix`** (from tag v0.6.0 @ 569546b — re-cut; unchanged by the test-slot refresh above, which is ahead of it) | 2026-08-31 | `1ffafc11431cb3ca64cd8f92492a4aaf614f3791862d34486422f5ac24721ea9` |
 
 Superseded builds, kept for the record — **do not install these**:
@@ -23,6 +23,7 @@ Superseded builds, kept for the record — **do not install these**:
 | Superseded | Date | SHA-256 |
 |---|---|---|
 | `sanad-0.6.0.vsix` first cut (tag v0.6.0 @ 8bbb0b0, before the fix batch) — replaced the same day by the re-cut above | 2026-08-31 | `1a2df3c8291b420a17b167de1c9cbddbc91dcce17c928882f86803653c307d24` |
+| test-build slot `E-REW@bab424e` | 2026-08-31 | `197f28d003460dad9e40f4b1a8f73ab0a8c867ac10420625de6e0927884d52e0` |
 | test-build slot `E-REW@12e44f7` | 2026-08-31 | `92fcf70bb8544c3f63afb7a652b71528451b19804dcd493712452bce0dbe89e6` |
 | test-build slot `E-REW@bc9dc77` | 2026-08-31 | `eb2dc372f277a860022381e903b53119fa4824601e955f0eb239e040bb9f88ee` |
 | test-build slot `E-REW@9556dda` | 2026-08-31 | `b8a96e3c1bcb5dcde399c1a1485c76548e7c284308ad6f6bb8f23ef4bbd34387` |
