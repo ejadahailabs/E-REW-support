@@ -15,7 +15,7 @@ code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl
 
 | Built from | Date | SHA-256 |
 |---|---|---|
-| `E-REW@b8bfcab` (MAIN — connection fix: /v1 path join for bare-origin base URLs (the owner's 405) + verify/gear errors now print METHOD + full URL + plain-English reading) | 2026-08-30 | `df4a15155c0e3b6066c2e806dfcc25bfed5ecf83047befa15adfe6c51d143dbc` |
+| `E-REW@9423fa2` (MAIN — chat WIP banner #542 · pytest_smart reader + .py hover cards #543 · SW/Architecture lanes populate + C-comment hover #546 · hover fixes: exact DD term beats derived, every bold term gets a card, undefined terms underline RED #550) | 2026-08-31 | `09f18b2749b6a31b20826662be671e61c0d1532f4c1c319f4ef3a8433255c9c0` |
 
 ## Install
 
