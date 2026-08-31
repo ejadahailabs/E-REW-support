@@ -15,8 +15,8 @@ code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl
 
 | Built from | Date | SHA-256 |
 |---|---|---|
-| `E-REW@569546b` (MAIN — tag `v0.6.0`, re-cut: pre-release fix batch #562–#566 / #569 / #570 · one unconditional activation pass when a workspace opens #566 · CHANGELOG and docs brought in line with post-batch main) | 2026-08-31 | `1ffafc11431cb3ca64cd8f92492a4aaf614f3791862d34486422f5ac24721ea9` |
-| **RELEASE `sanad-0.6.0.vsix`** (from tag v0.6.0 @ 569546b — re-cut; byte-identical to the test-build slot above) | 2026-08-31 | `1ffafc11431cb3ca64cd8f92492a4aaf614f3791862d34486422f5ac24721ea9` |
+| `E-REW@bc9dc77` (MAIN — fixes from the 0.6.0 test round, on top of the released 0.6.0: a `.trace` file is a binding input, never a lane artifact #576 · enum values get their own values card with a confidence, instead of being listed as aliases #578 · a requirement card says where it is implemented, in the owner's three named link lanes #579 · verification reads every pytest case and finds the folders the templates declare #580 · a concept card's verification link opens the file it names #582) | 2026-08-31 | `eb2dc372f277a860022381e903b53119fa4824601e955f0eb239e040bb9f88ee` |
+| **RELEASE `sanad-0.6.0.vsix`** (from tag v0.6.0 @ 569546b — re-cut; unchanged by the test-slot refresh above, which is ahead of it) | 2026-08-31 | `1ffafc11431cb3ca64cd8f92492a4aaf614f3791862d34486422f5ac24721ea9` |
 
 Superseded builds, kept for the record — **do not install these**:
 
