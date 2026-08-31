@@ -15,7 +15,7 @@ code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl
 
 | Built from | Date | SHA-256 |
 |---|---|---|
-| `E-REW@bc9dc77` (MAIN — fixes from the 0.6.0 test round, on top of the released 0.6.0: a `.trace` file is a binding input, never a lane artifact #576 · enum values get their own values card with a confidence, instead of being listed as aliases #578 · a requirement card says where it is implemented, in the owner's three named link lanes #579 · verification reads every pytest case and finds the folders the templates declare #580 · a concept card's verification link opens the file it names #582) | 2026-08-31 | `eb2dc372f277a860022381e903b53119fa4824601e955f0eb239e040bb9f88ee` |
+| `E-REW@12e44f7` (MAIN — everything in the previous slot #576 · #578 · #579 · #580 · #582, plus: a data dictionary whose columns Sanad does not recognise now loads instead of being skipped — a parameter needs only a name to be valid, each entry reads as a requirement-style card showing your own column headers and the file it came from, and the columns Sanad could not place come back as an offered mapping you accept with **Sanad: Accept Offered Dictionary Mapping** #586) | 2026-08-31 | `92fcf70bb8544c3f63afb7a652b71528451b19804dcd493712452bce0dbe89e6` |
 | **RELEASE `sanad-0.6.0.vsix`** (from tag v0.6.0 @ 569546b — re-cut; unchanged by the test-slot refresh above, which is ahead of it) | 2026-08-31 | `1ffafc11431cb3ca64cd8f92492a4aaf614f3791862d34486422f5ac24721ea9` |
 
 Superseded builds, kept for the record — **do not install these**:
@@ -23,6 +23,7 @@ Superseded builds, kept for the record — **do not install these**:
 | Superseded | Date | SHA-256 |
 |---|---|---|
 | `sanad-0.6.0.vsix` first cut (tag v0.6.0 @ 8bbb0b0, before the fix batch) — replaced the same day by the re-cut above | 2026-08-31 | `1a2df3c8291b420a17b167de1c9cbddbc91dcce17c928882f86803653c307d24` |
+| test-build slot `E-REW@bc9dc77` | 2026-08-31 | `eb2dc372f277a860022381e903b53119fa4824601e955f0eb239e040bb9f88ee` |
 | test-build slot `E-REW@9556dda` | 2026-08-31 | `b8a96e3c1bcb5dcde399c1a1485c76548e7c284308ad6f6bb8f23ef4bbd34387` |
 
 ## Install
