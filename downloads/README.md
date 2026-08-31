@@ -15,7 +15,7 @@ code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl
 
 | Built from | Date | SHA-256 |
 |---|---|---|
-| `E-REW@9423fa2` (MAIN — chat WIP banner #542 · pytest_smart reader + .py hover cards #543 · SW/Architecture lanes populate + C-comment hover #546 · hover fixes: exact DD term beats derived, every bold term gets a card, undefined terms underline RED #550) | 2026-08-31 | `09f18b2749b6a31b20826662be671e61c0d1532f4c1c319f4ef3a8433255c9c0` |
+| `E-REW@9556dda` (MAIN — DD term-mapping chain: req name↔SW name↔code↔verification #556 · front matter optional everywhere + all C/C++ swept + .trace YAML reader (entity_id→codeSymbol, upstreams→requirements) #557 · sample-material scrub #558) | 2026-08-31 | `b8a96e3c1bcb5dcde399c1a1485c76548e7c284308ad6f6bb8f23ef4bbd34387` |
 
 ## Install
 
