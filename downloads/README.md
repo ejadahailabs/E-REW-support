@@ -17,7 +17,7 @@ code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl
 
 | Built from | Date | SHA-256 |
 |---|---|---|
-| `E-REW@c840ba6` (MAIN — everything in the previous slot, plus: a value you declared in your data dictionary is no longer flagged as a vague word or an unknown term, in any scope — the RC3 regression #599; and a large dictionary no longer stalls the editor or kills the VS Code extension host: the slow step that dominated startup dropped from about 5.1 seconds to 0.13, and a 500,000-item dictionary stays workable, with a warning instead of a freeze past that #601) | 2026-09-01 | `a4f81b4b91d54d8a9257d4dbae6af1d83500dc33ed43e67cc86a3e5413d533e0` |
+| `E-REW@ba5db12` (MAIN — **RC5a**; everything in the previous slot, plus: clicking a code link on a requirement card now opens the **function's definition**, and the Implements/Verifies links actually go somewhere instead of failing #612; impact analysis now reads the symbol index that is already loaded, so it tells C++ overloads apart when they differ only by a `const` qualifier #609; a requirement reference that points at nothing is reported as a finding and gets its own section in the report #616; on a repository that uses `.trace`, code that no requirement traces to is now reported as untraced #615; and the on-disk term index is encrypted at rest, ADR-0105 #608. Verifies-lanes and per-function refinement follow in RC5b) | 2026-09-01 | `ef8b76819e701482f2bc993c48ab3a4a4329b0086097d7e017729de966d03ac6` |
 | **RELEASE `sanad-0.6.0.vsix`** (from tag v0.6.0 @ 569546b — re-cut; unchanged by the test-slot refresh above, which is ahead of it) | 2026-08-31 | `1ffafc11431cb3ca64cd8f92492a4aaf614f3791862d34486422f5ac24721ea9` |
 
 Superseded builds, kept for the record — **do not install these**:
@@ -25,6 +25,7 @@ Superseded builds, kept for the record — **do not install these**:
 | Superseded | Date | SHA-256 |
 |---|---|---|
 | `sanad-0.6.0.vsix` first cut (tag v0.6.0 @ 8bbb0b0, before the fix batch) — replaced the same day by the re-cut above | 2026-08-31 | `1a2df3c8291b420a17b167de1c9cbddbc91dcce17c928882f86803653c307d24` |
+| test-build slot `E-REW@c840ba6` (RC4 — data-dictionary values no longer flagged as vague or unknown #599; large-dictionary startup stall fixed #601) | 2026-09-01 | `a4f81b4b91d54d8a9257d4dbae6af1d83500dc33ed43e67cc86a3e5413d533e0` |
 | test-build slot `E-REW@f5a7061` (structural YAML data-dictionary loading: #597 · #598) | 2026-09-01 | `43bd2b59ee7c3f18ef0cb8d9dfe41244915775a4f3787e4492af093d505f57b0` |
 | test-build slot `E-REW@77b1bdb` (whole-literal-first marked spans: #594 · #595) | 2026-08-31 | `44160ff8132212ec29bc01c237aa1fcdc3cb473d20f472cfd0be5f1496ca2059` |
 | test-build slot `E-REW@c9ac327` (separator spacing + pytest underlines: #591 · #590) | 2026-08-31 | `638f371da61fffe9445e02897c53d1872533cac1d3736b11f683bae8f3c7dc47` |
