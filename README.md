@@ -26,6 +26,8 @@ an invitation, or our permission to report a problem or read the guide.
 | How do I…? | **[User Guide](USER_GUIDE.md)** | — |
 | Security vulnerability | **[SECURITY.md](SECURITY.md)** — never a public issue | 72 hours to acknowledge |
 
+**Technical support:** support@ejadahailabs.com
+
 Those targets mean a **substantive** response — a fix, a workaround, or a clear statement
 of what we found and when it lands. Not an automated acknowledgement.
 

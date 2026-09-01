@@ -3,6 +3,8 @@
 The newest `.vsix` in this folder is the current build. Install it from any machine — you
 do not need this repository cloned, just the file.
 
+**Technical support:** support@ejadahailabs.com
+
 ## Test build (pre-release slot — owner testing only)
 
 `e-rew-test-build.vsix` is the rolling **pre-release candidate** built from `main`. It is
@@ -61,6 +63,8 @@ sha256sum e-rew-0.5.3.vsix
 | `e-rew-0.5.0.vsix` | `1680ba5c29a1715c933e7360a57664cc5c248e731c7c2731db3d4ebee4afc784` |
 
 ## Known gaps in 0.5.3
+
+Hit one of these, or something not listed here? **Technical support:** support@ejadahailabs.com
 
 0.5.3 delivered the owner test round: the form is the default reading and editing
 surface (read-only first, Word-style tables and nested lists, EARS patterns,
