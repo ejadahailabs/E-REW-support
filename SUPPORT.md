@@ -12,6 +12,8 @@ wrote the code.
 | I need a capability | [Request a feature](https://github.com/ejadahailabs/E-REW-support/issues/new?template=feature_request.yml) |
 | Security vulnerability | [SECURITY.md](SECURITY.md) — **never** a public issue |
 
+**Technical support:** support@ejadahailabs.com
+
 ## Turnaround targets
 
 | Kind | Target |

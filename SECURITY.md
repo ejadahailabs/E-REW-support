@@ -4,7 +4,7 @@
 
 **Do not open a public issue.**
 
-Email **ejadahailabs@gmail.com** with `[Sanad SECURITY]` in the subject.
+Email **support@ejadahailabs.com** with `[Sanad SECURITY]` in the subject.
 
 Include what you found, how to reproduce it, and what an attacker could achieve. If you
 have a proof of concept, include it — we will not treat a good-faith report as an attack.
