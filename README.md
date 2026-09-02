@@ -11,16 +11,31 @@
 ---
 
 This is the public home for **support, issues and documentation** of
-**Sanad — Requirements Engineering Workbench**, by **Ejadah AI Labs**.
+**Sanad — Engineering Intelligence Workbench**, by **Ejadah AI Labs**.
 
 The extension's source is proprietary and lives in a private repository. Everything you
 need as a *user* is here, and it is public on purpose: you should never need an account,
 an invitation, or our permission to report a problem or read the guide.
 
+**Current release: 0.6.1.** Install it from the
+**[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=EjadahAILABS.sanad)**,
+or download the `.vsix` from **[downloads/](downloads/)** if your organisation cannot
+reach the Marketplace.
+
+> **New here? Start with [GETTING-STARTED.md](GETTING-STARTED.md)** — the one-time setup
+> walkthrough: install, open your repository, run setup, read your first run log.
+
+> **While Sanad is a prototype, each released build runs for 45 days from its release
+> date and then asks you to update.** The count starts on the release date, not your
+> install date. Nothing you have written is affected — your requirements are your own
+> files in your own repository. Details in
+> [downloads/README.md](downloads/README.md).
+
 ## Get help
 
 | Need | Where | Target |
 |---|---|---|
+| I am setting it up for the first time | **[Getting Started](GETTING-STARTED.md)** | — |
 | Something is wrong | **[Report a bug](../../issues/new?template=bug_report.yml)** | **72 hours** |
 | I need a capability | **[Request a feature](../../issues/new?template=feature_request.yml)** | **about one week** |
 | How do I…? | **[User Guide](USER_GUIDE.md)** | — |

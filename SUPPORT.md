@@ -7,6 +7,7 @@ wrote the code.
 
 | Need | Where |
 |---|---|
+| First-time setup | [Getting Started](GETTING-STARTED.md) |
 | How do I…? | [User Guide](USER_GUIDE.md) |
 | Something is wrong | [Open a bug](https://github.com/ejadahailabs/E-REW-support/issues/new?template=bug_report.yml) |
 | I need a capability | [Request a feature](https://github.com/ejadahailabs/E-REW-support/issues/new?template=feature_request.yml) |

@@ -1,7 +1,17 @@
 # Installing Sanad
 
-The newest `.vsix` in this folder is the current build. Install it from any machine — you
-do not need this repository cloned, just the file.
+**Sanad 0.6.1 is on the Visual Studio Marketplace.** That is the normal way to install it,
+and it updates itself:
+
+**[marketplace.visualstudio.com/items?itemName=EjadahAILABS.sanad](https://marketplace.visualstudio.com/items?itemName=EjadahAILABS.sanad)**
+
+This page is the **manual fallback**, for anyone whose organisation cannot reach the
+Marketplace. The newest `.vsix` in this folder is the current build; install it from any
+machine — you do not need this repository cloned, just the file.
+
+**New to Sanad?** The one-time setup walkthrough is
+**[GETTING-STARTED.md](../GETTING-STARTED.md)** — install, open your repository, run setup,
+run the first analysis.
 
 **Technical support:** support@ejadahailabs.com
 
@@ -40,19 +50,28 @@ Superseded builds, kept for the record — **do not install these**:
 
 ## Install
 
-Download `sanad-0.6.1.vsix`, then either:
+**From the Marketplace** — the normal route, and it keeps itself updated:
 
-**From the command line**
+```
+code --install-extension EjadahAILABS.sanad
+```
+
+…or search for **Sanad** in the Extensions view.
+
+**From a `.vsix`** — download `sanad-0.6.1.vsix` from this folder, then either:
 
 ```
 code --install-extension sanad-0.6.1.vsix
 ```
 
-**From inside VS Code** — Extensions view → `...` menu → *Install from VSIX...*
+…or Extensions view → `...` menu → *Install from VSIX...*. A sideloaded build does not
+auto-update: come back here when it expires.
 
 **Then quit VS Code completely** (`Ctrl+Q`, or Quit from the menu). A window
 reload is not enough: it does not swap the extension host, and the old build
 stays live. This is the single most common reason a fresh install "does nothing".
+
+Requires **VS Code 1.90 or newer**.
 
 ## Verify what you installed
 
@@ -85,39 +104,41 @@ changing anything.
 nothing is switched off, but they have not finished testing, and they say so in the
 capability switcher, on the lane and in setup. Requirements is the mature capability.
 
-Still engine-only or unfinished, completing in a later release:
+Unfinished, completing in a later release:
 
 | Area | State |
 |---|---|
-| Template designer form (design a template end to end) | not yet — configuration edits types field by field |
-| Guided setup (artefact checkboxes + paths, relationships UI, per-artefact templates, rules adoption step) | partial — field-role mapping and the relationship map exist; the full guided flow is being built |
-| Declaring your own data-dictionary sources | works via `producers:` in `.ejadah/rew/config.yaml` (documented in the user guide); no form yet |
-| Workbench v1 configuration layers (product file, artifact_types schema, standards mapping, views) | filed as FEAT-070…080; unbuilt parts appear as visible "Work in progress" panels, never silently |
-| Finding marks inside table cells | the note list under the field carries them; per-character underlines in cells are not drawn |
-| Code indexing | C and C++ only; Python files are read for verification cases, not indexed as symbols |
-| Marketplace listing | not published yet — this page is the way to install |
+| Setup step **8 · Standards mapping** | a placeholder that records nothing yet, and says so on screen. Until it lands, every standard is reported as *declared, not checked* |
+| Setup step **9 · Views & reports** | a placeholder that records nothing yet, and says so on screen. The built-in reports run as they do today |
+| Multi-repository programmes | you can pick a split topology in setup and the choice is kept, but Sanad works on **this one repository** for now. It says so at the moment you pick it |
+| Code indexing | **C and C++ only.** Python files are read for verification cases and hover cards; they are not indexed as symbols. No other language is indexed |
+| Finding marks inside table cells | the note list under the field carries them; per-character underlines are not drawn inside table cells |
+| Reports | produced by the `erew` command line (`erew --report <name>`), not by an editor command. Dashboards and the lens views are the in-editor surfaces |
+| Review and Systems capabilities | greyed out in setup — you cannot tick them yet. The Safety, Security and Interface checks still run as they always have, whenever the roles they need are declared |
 
 ## Opening your requirements for the first time
+
+**The full walkthrough is [GETTING-STARTED.md](../GETTING-STARTED.md).** The short
+version:
 
 Sanad activates on a folder that contains `.ejadah/rew/`. A folder that has
 never been set up will not light up on its own — that is expected, not a broken
 install.
 
 1. Open the folder holding your requirements.
-2. Command Palette → **REW: Set Up REW in This Folder**.
-3. Choose where templates should come from:
+2. Command Palette → **Sanad: Set Up Sanad in This Folder** (or click the button in the
+   empty Requirements view).
+3. Work down the ten steps of the form. Only **1 · Product** and **2 · Artifact types**
+   need your attention the first time; the rest are optional, and each one you leave
+   blank turns off the analysis that needed it, with that stated as the reason.
+4. Press **Setup complete**. Nothing is written to disk before that.
 
-| Your situation | Choose |
-|---|---|
-| Requirements already exist | **Derive a template from existing requirements** |
-| Starting from nothing | **Create a starter template** |
-| You already have Sanad templates | **Copy templates I already have** |
+Re-run the command any time — the form re-opens pre-filled with what you already
+answered.
 
-4. Reload the window when it offers.
-
-Your requirement files are **never rewritten** by setup. Sanad only writes
-`.ejadah/rew/templates/` and `.ejadah/rew/config.yaml`, and only if they do not
-already exist.
+Your requirement files are **never rewritten** by setup. Sanad writes only under
+`.ejadah/rew/` plus `sanad-product.yaml`, and it never overwrites a file that already
+exists. Commit `.ejadah/` and the setup is shared with your whole team.
 
 ## Both file shapes are supported
 
