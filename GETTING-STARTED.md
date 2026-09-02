@@ -199,6 +199,12 @@ your AI-assisted features should call. **Never an API key here** — a credentia
 config file is refused, not quietly accepted. The one credential Sanad holds lives in VS
 Code's secret storage, set with **Sanad: Set Credential** or **Sanad: Sign In to LLM**.
 
+If you would rather be walked through it — including which authentication mode your
+gateway wants, and a connection test that says *which* of reachability, credential, wire
+format or the model itself is the thing that failed — see *Connecting your AI* in the
+[User Guide](USER_GUIDE.md#10-ai-optional). The guided **Sanad: Connect AI Provider**
+command it describes lands in the next test build.
+
 ### Press "Setup complete"
 
 Now Sanad writes `.ejadah/rew/config.yaml`, your templates, `sanad-product.yaml` and — if
