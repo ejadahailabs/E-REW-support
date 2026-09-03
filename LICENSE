@@ -1,11 +1,15 @@
-E-REW — Requirements Engineering Workbench
+Sanad — Engineering Intelligence Workbench
 Copyright (c) 2026 Ejadah AI Labs. All rights reserved.
 
-E-REW is proprietary software. It is licensed, not sold.
+Sanad is proprietary software. It is licensed, not sold.
 
-PERMITTED USE
-You may install and use this extension to evaluate it, for your own or your
-organisation's purposes.
+BETA LICENCE
+Sanad is provided free of charge during its beta period, which covers every
+release numbered below 1.0. Individuals and organisations may install, use and
+evaluate beta releases without a licence key. Each beta release is valid for 45
+days from its release date; when a release expires, install the current release
+to continue. The application will indicate when a licence key becomes required.
+Licensed use begins with version 1.0.
 
 NOT PERMITTED
 You may not copy, modify, adapt, translate, distribute, sublicense, sell, rent,
@@ -14,14 +18,10 @@ source code by reverse engineering, decompilation or disassembly, except to the
 extent applicable law expressly permits despite this limitation; or remove or
 obscure any proprietary notice.
 
-EVALUATION BUILD
-This release is a time-limited evaluation build. It ceases to function thirty
-(30) days after first activation on a given installation.
-
 YOUR DATA
 Requirements you author are your own data. They are Markdown files in your own
 repository, they remain readable without this extension, and they are unaffected
-when the evaluation period ends. This extension collects no personal data and
+when a beta release expires. This extension collects no personal data and
 transmits nothing to Ejadah AI Labs. Where you configure an external AI provider
 of your own, content you choose to send is governed by that provider's terms,
 not by this licence.
