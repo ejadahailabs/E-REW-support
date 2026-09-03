@@ -37,7 +37,7 @@ Superseded builds, kept for the record — **do not install these**:
 | test-build slot from the **v0.6.1 release build itself** (tag v0.6.1 @ 916a133) — held the slot until the refresh above; byte-identical to `sanad-0.6.1.vsix`, which is still current as the release | 2026-09-01 | `ac96d2ebbf5840305f78cc3e39a87e5251502fcec1f79ade88ad09f4780e13f6` |
 | **`sanad-0.6.0.vsix` re-cut (tag v0.6.0 @ 569546b) — WITHDRAWN, superseded by 0.6.1.** Its Implements and Verifies card links displayed mangled and did nothing when clicked (#620). The file stays in this folder as a record; install 0.6.1 instead. | 2026-08-31 | `1ffafc11431cb3ca64cd8f92492a4aaf614f3791862d34486422f5ac24721ea9` |
 | test-build slot `E-REW@90a5f50` (RC6 preview, cut before that branch's CI finished; its content shipped in the 0.6.1 release above) | 2026-09-02 | `47f3b80aff5008480962e6b951676d05dd1710c516274ef920a245e29485caf7` |
-| test-build slot `E-REW@9702f7b` (RC5b, development-complete candidate; everything in the previous slot, plus: the **Verifies** lane on a requirement card now fills from four places instead of one — a `verifies` marker inside a test, ids written in the test's own content under a prefix you declare, a verification data dictionary (requirement + verification id + unit under test, mapped through your own `fields:`), and the test **file name** (`test_REQ-743.py`, and bare numbers that inherit the prefix in front of them) — with the marker still winning where one exists, and an id in a name that your requirements do not declare reported as a finding instead of quietly linked #605; **every function inside the trace scope you declared that no requirement traces to is now listed by name**, with a per-file total on top of it, and the list is capped and says so rather than pretending to be complete #613; and, new policy: **while Sanad is a prototype each build runs for 45 days from its release date** — this one is dated 2026-09-01, so it stops on **2026-10-16**, with a non-blocking notice on each of the last seven days naming that date; nothing you have written is affected, an expired build stops running rather than changing anything, and the update link that used to 404 now resolves #618) | 2026-09-01 | `de916943c43d42824fb176394154a40bab8c091e0996815281ec58185f3d0ab5` |
+| test-build slot `E-REW@9702f7b` (RC5b, development-complete candidate; everything in the previous slot, plus: the **Verifies** lane on a requirement card now fills from four places instead of one — a `verifies` marker inside a test, ids written in the test's own content under a prefix you declare, a verification data dictionary (requirement + verification id + unit under test, mapped through your own `fields:`), and the test **file name** (`test_REQ-743.py`, and bare numbers that inherit the prefix in front of them) — with the marker still winning where one exists, and an id in a name that your requirements do not declare reported as a finding instead of quietly linked #605; **every function inside the trace scope you declared that no requirement traces to is now listed by name**, with a per-file total on top of it, and the list is capped and says so rather than pretending to be complete #613; and, new policy: **each beta release is valid for 45 days from its release date** — this one is dated 2026-09-01, so it stops on **2026-10-16**, with a non-blocking notice on each of the last seven days naming that date; nothing you have written is affected, an expired release stops running rather than changing anything, and the update link that used to 404 now resolves #618) | 2026-09-01 | `de916943c43d42824fb176394154a40bab8c091e0996815281ec58185f3d0ab5` |
 | test-build slot `E-REW@ba5db12` (RC5a — everything in the previous slot, plus: clicking a code link on a requirement card now opens the **function's definition**, and the Implements/Verifies links actually go somewhere instead of failing #612; impact analysis now reads the symbol index that is already loaded, so it tells C++ overloads apart when they differ only by a `const` qualifier #609; a requirement reference that points at nothing is reported as a finding and gets its own section in the report #616; on a repository that uses `.trace`, code that no requirement traces to is now reported as untraced #615; and the on-disk term index is encrypted at rest, ADR-0105 #608. Verifies-lanes and per-function refinement follow in RC5b) | 2026-09-01 | `ef8b76819e701482f2bc993c48ab3a4a4329b0086097d7e017729de966d03ac6` |
 | `sanad-0.6.0.vsix` first cut (tag v0.6.0 @ 8bbb0b0, before the fix batch) — replaced the same day by the re-cut above, and both superseded by 0.6.1 | 2026-08-31 | `1a2df3c8291b420a17b167de1c9cbddbc91dcce17c928882f86803653c307d24` |
 | test-build slot `E-REW@c840ba6` (RC4 — data-dictionary values no longer flagged as vague or unknown #599; large-dictionary startup stall fixed #601) | 2026-09-01 | `a4f81b4b91d54d8a9257d4dbae6af1d83500dc33ed43e67cc86a3e5413d533e0` |
@@ -93,12 +93,15 @@ sha256sum sanad-0.6.1.vsix
 
 Hit one of these, or something not listed here? **Technical support:** support@ejadahailabs.com
 
-**This build stops working on 2026-10-16.** While Sanad is a prototype, each release
-runs for 45 days from the day it was cut (2026-09-01 for this one), then asks you to
-update. The count starts at the release date, not your install date, so everyone on
-this build stops on the same day. You get a non-blocking notice on each of the last
-seven days. Nothing you have written is affected — your requirements are your own
-files in your own repository, and an expired build stops running rather than
+**This beta release is free to use until 2026-10-16.** Sanad is provided free of
+charge during its beta period, which covers every release numbered below 1.0. Each
+beta release is valid for 45 days from its release date (2026-09-01 for this one);
+when a release expires, install the current release to continue. The count starts at
+the release date, not your install date, so everyone on this release stops on the
+same day, and you get a non-blocking notice on each of the last seven. No licence key
+is needed — Sanad tells you when one becomes required, and licensed use begins with
+version 1.0. Nothing you have written is affected: your requirements are your own
+files in your own repository, and an expired release stops running rather than
 changing anything.
 
 **Software and Verification are work-in-progress previews.** They run in full and
@@ -175,5 +178,11 @@ paste requirement text you are not free to share.
 
 ## Licence
 
-This is pilot software, proprietary and time-limited — see `LICENSE.txt` inside
-the extension. It is provided for evaluation.
+Proprietary — see `LICENSE.txt` inside the extension, or [LICENSE](../LICENSE) here.
+
+Sanad is provided free of charge during its beta period, which covers every release
+numbered below 1.0. Individuals and organisations may install, use and evaluate beta
+releases without a licence key. Each beta release is valid for 45 days from its
+release date; when a release expires, install the current release to continue. The
+application will indicate when a licence key becomes required. Licensed use begins
+with version 1.0.
