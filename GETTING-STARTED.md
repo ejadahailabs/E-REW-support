@@ -487,7 +487,7 @@ read is reported there, never silently dropped.
 | | |
 |---|---|
 | The full reference — roles, rule packs, baselines, the CI gate | **[User Guide](USER_GUIDE.md)** |
-| Installing, checksums, known gaps, the 45-day expiry | **[downloads/README.md](downloads/README.md)** |
+| Installing, checksums, known gaps, the beta licence and its 45 days | **[downloads/README.md](downloads/README.md)** |
 | Something is wrong | **[Open a bug](https://github.com/ejadahailabs/E-REW-support/issues/new?template=bug_report.yml)** — 72-hour target |
 | Anything else | **support@ejadahailabs.com** |
 
