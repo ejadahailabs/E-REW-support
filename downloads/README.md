@@ -6,8 +6,10 @@ and it updates itself:
 **[marketplace.visualstudio.com/items?itemName=EjadahAILABS.sanad](https://marketplace.visualstudio.com/items?itemName=EjadahAILABS.sanad)**
 
 This page is the **manual fallback**, for anyone whose organisation cannot reach the
-Marketplace. The newest `.vsix` in this folder is the current build; install it from any
-machine — you do not need this repository cloned, just the file.
+Marketplace. **`sanad-0.6.1.vsix` is the current build — install that one.** It is not the
+newest file in this folder: `sanad-0.6.2.vsix` sits beside it as a **test build under
+evaluation**, described in the next section, and it is not recommended for use yet. Install
+from any machine — you do not need this repository cloned, just the file.
 
 **New to Sanad?** The one-time setup walkthrough is
 **[GETTING-STARTED.md](../GETTING-STARTED.md)** — install, open your repository, run setup,
@@ -16,6 +18,24 @@ run the first analysis.
 **Technical support:** support@ejadahailabs.com
 
 ## Test build (pre-release slot — owner testing only)
+
+**`sanad-0.6.2.vsix` is a test build under evaluation — not the current release.**
+It is version-stamped and tagged (`v0.6.2`), so it installs beside nothing and replaces
+0.6.1 in your editor if you install it. It is here so it can be tested on a second machine.
+**0.6.1 remains the current, recommended download** while a reported regression in the demo
+output is checked; until that is settled, treat 0.6.2 as evaluation only.
+
+```
+curl -LO https://github.com/ejadahailabs/E-REW-support/raw/main/downloads/sanad-0.6.2.vsix
+code --install-extension sanad-0.6.2.vsix   # then quit VS Code fully (Ctrl+Q)
+```
+
+**Before you install any 0.6.x build: if this machine has ever had E-REW 0.5.x on it,
+uninstall that first.** 0.6.0 renamed the extension, and VS Code treats the old id as a
+separate extension rather than an older one — so both activate on the same folder, collide
+over the same commands, and whichever loads first wins. When the old one wins you get
+0.5.x's behaviour under 0.6's name, including an analysis that re-runs on every reload.
+0.6.2 detects the retired build on startup and offers to remove it; 0.6.1 does not.
 
 `e-rew-test-build.vsix` is the rolling **pre-release candidate** built from `main`. It is
 overwritten every bug round; the file name and URL never change. Not a release.
@@ -27,6 +47,7 @@ code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl
 
 | Built from | Date | SHA-256 |
 |---|---|---|
+| **TEST BUILD `sanad-0.6.2.vsix`** (from tag v0.6.2 @ `ab6a199`) — **under evaluation, not the recommended download.** 0.6.1 below stays current. Over 0.6.1 it adds: a retired 0.5.x install is detected on startup and offered for removal, instead of silently winning the window and running 0.5.x's analysis under 0.6's name #736/#739; a **Read ledger** — one card, one run-log block and `--ledger-json`, collecting everything a run could not read and grouping it by the fix that closes it #690; a code index Sanad refused now says so as a finding and a ledger row rather than reading as clean #737/#740; assistant **tasks** you reach by typing `/` — `/explain`, `/improve`, `/derive-conditions`, `/draft` — with the proposal card stating its own limits and cost ceiling before you apply anything; **Sanad: Impact of a Requirement** and **Sanad: Connect AI Provider** reach the palette; provenance, a configuration hash and a published schema tag on every export; requirement IDs are cards and links in C/C++ comments, pytest docstrings, `.trace` tables and verification documents, not only in Markdown; two new checks (`derived-without-justification`, `missing-required-role`); and a long list of silences given names — an unparseable `config.yaml`, a semicolon-separated CSV, a duplicated spreadsheet heading, a test verdict landing on nothing, a misspelled rule id, a results folder of unreadable reports, a repository where nothing could be checked no longer reporting 100 % clean. **Expires 2026-10-18.** | 2026-09-03 | `6dd90605fd17631dee67d6eafc619475160b0aa2aa9f83efd9d165f627af5fc9` |
 | **RELEASE `sanad-0.6.1.vsix`** (from tag v0.6.1 @ 916a133 — the current release) | 2026-09-01 | `ac96d2ebbf5840305f78cc3e39a87e5251502fcec1f79ade88ad09f4780e13f6` |
 | test-build slot `E-REW@e147cb8` — **ahead of the 0.6.1 release above.** Over 0.6.1 it adds: the three explicit `verifies` forms now bind under the marker lane, so a test that names a requirement on one line is linked instead of ignored #650/#652; the EARS matcher reads a wider set of openers and trailing conditions, so realistic requirements are recognised #651/#653; a shape Sanad does not recognise is now reported as **unclassified** rather than guessed at, every finding message is one plain sentence with the detail underneath it, possible-exception lines are called out, and each report stamps the commit and date it was produced from #654/#655; the **Verification** and **Software** lenses the capability switcher opens #642; the licence text and the user guide now name Sanad and only commands that exist #648/#649; plus the engine and scale work behind them — a 10× repository tier, the dictionary ceiling profiled so a large one no longer stalls the editor, and the audit report and verification engine sharing one source of possible cases | 2026-09-02 | `c99a36ab7cde5966a4ad6e913ba3ab9781d8047019196355ca289be59eb01b61` |
 
@@ -82,6 +103,7 @@ sha256sum sanad-0.6.1.vsix
 
 | Build | SHA-256 |
 |---|---|
+| `sanad-0.6.2.vsix` (test build — under evaluation, not recommended yet) | `6dd90605fd17631dee67d6eafc619475160b0aa2aa9f83efd9d165f627af5fc9` |
 | `sanad-0.6.1.vsix` **(current)** | `ac96d2ebbf5840305f78cc3e39a87e5251502fcec1f79ade88ad09f4780e13f6` |
 | `sanad-0.6.0.vsix` (withdrawn — see above) | `1ffafc11431cb3ca64cd8f92492a4aaf614f3791862d34486422f5ac24721ea9` |
 | `e-rew-0.5.3.vsix` | `b0c6c7cc3035890b36898d77dc14a31c1b57fb0acabe349ac4b7bf4c1c65f3ba` |
