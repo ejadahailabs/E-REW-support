@@ -9,8 +9,13 @@ back here for the reference.
 
 **Requirements** is the mature capability. **Software** and **Verification** ship in 0.6.1
 and run in full, but are labelled **work in progress** wherever you meet them: we have not
-finished testing them. **While Sanad is a prototype, each released build runs for 45 days
-from its release date** and then asks you to update; nothing you have written is affected.
+finished testing them.
+
+**Sanad is free to use during its beta period** — every release numbered below 1.0. You
+may install, use and evaluate it without a licence key. Each beta release is valid for 45
+days from its release date; when a release expires, install the current release to
+continue. Sanad tells you when a licence key becomes required. Licensed use begins with
+version 1.0. Nothing you have written is affected either way.
 
 ---
 

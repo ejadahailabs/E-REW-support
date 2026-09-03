@@ -25,10 +25,11 @@ reach the Marketplace.
 > **New here? Start with [GETTING-STARTED.md](GETTING-STARTED.md)** — the one-time setup
 > walkthrough: install, open your repository, run setup, read your first run log.
 
-> **While Sanad is a prototype, each released build runs for 45 days from its release
-> date and then asks you to update.** The count starts on the release date, not your
-> install date. Nothing you have written is affected — your requirements are your own
-> files in your own repository. Details in
+> **Sanad is free to use during its beta period** — every release numbered below 1.0.
+> Install, use and evaluate it without a licence key. Each beta release is valid for 45
+> days from its release date; when a release expires, install the current release to
+> continue. Licensed use begins with version 1.0. Nothing you have written is affected —
+> your requirements are your own files in your own repository. Details in
 > [downloads/README.md](downloads/README.md).
 
 ## Get help
