@@ -9,13 +9,13 @@ body:
         **Target turnaround for a bug fix: 72 hours.**
 
         The single most useful thing you can give us is the finding REW produced,
-        or the finding it should have produced and did not. E-REW is an evidence
+        or the finding it should have produced and did not. Sanad is an evidence
         tool — a wrong or missing finding is the bug, even when nothing crashed.
   - type: input
     id: version
     attributes:
-      label: E-REW version
-      description: VS Code → Extensions → E-REW, or Help → About.
+      label: Sanad version
+      description: VS Code → Extensions → Sanad, or Help → About.
       placeholder: "0.2.2"
     validations: { required: true }
   - type: dropdown
@@ -49,7 +49,7 @@ body:
     attributes:
       label: Relevant template (optional, and often decisive)
       description: >
-        E-REW defines no metadata schema — your templates declare the fields and
+        Sanad defines no metadata schema — your templates declare the fields and
         roles. Many "missing check" reports turn out to be an undeclared role,
         which by design disables the analysis that needs it rather than guessing.
       render: markdown
