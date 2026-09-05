@@ -14,7 +14,7 @@ body:
     attributes:
       label: Which engineering question would this let you answer?
       description: >
-        E-REW exists to make engineering questions deterministically answerable —
+        Sanad exists to make engineering questions deterministically answerable —
         "what is unproven?", "what does this change reach?". A capability that
         answers a real question gets built ahead of one that adds a feature.
       placeholder: "I need to know which safety requirements have no verification evidence at a given commit."
