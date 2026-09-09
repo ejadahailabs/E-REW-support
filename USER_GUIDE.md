@@ -3,11 +3,11 @@
 **Sanad — Engineering Intelligence Workbench.** Part of the Ejadah Engineering
 Intelligence Platform, by Ejadah AI Labs.
 
-**This guide covers Sanad 0.6.1.** Setting it up for the first time? Start with
+**This guide covers Sanad 0.6.3.** Setting it up for the first time? Start with
 **[GETTING-STARTED.md](GETTING-STARTED.md)** — the one-time setup walkthrough — and come
 back here for the reference.
 
-**Requirements** is the mature capability. **Software** and **Verification** ship in 0.6.1
+**Requirements** is the mature capability. **Software** and **Verification** ship in 0.6.3
 and run in full, but are labelled **work in progress** wherever you meet them: we have not
 finished testing them.
 
@@ -47,7 +47,7 @@ Or sideload a `.vsix` from [`downloads/`](downloads/) if your organisation canno
 the Marketplace:
 
 ```
-code --install-extension sanad-0.6.1.vsix
+code --install-extension sanad-0.6.3.vsix
 ```
 
 **Then quit VS Code completely** (`Ctrl+Q`). A window reload does not swap the extension
@@ -603,12 +603,12 @@ locally and the verdict your build enforces cannot disagree.
 The CLI ships inside the extension package. A `.vsix` is a zip archive:
 
 ```bash
-unzip sanad-0.6.1.vsix -d sanad
+unzip sanad-0.6.3.vsix -d sanad
 node sanad/extension/dist/cli-entry.js --help
 ```
 
 If the extension is already installed, the same file is on your machine at
-`~/.vscode/extensions/ejadahailabs.sanad-0.6.1/dist/cli-entry.js`. All it needs is
+`~/.vscode/extensions/ejadahailabs.sanad-0.6.3/dist/cli-entry.js`. All it needs is
 Node 20 or later — no VS Code anywhere.
 
 ```
@@ -666,7 +666,7 @@ jobs:
       - name: Unpack the Sanad CLI
         run: |
           curl -fsSL -o sanad.vsix \
-            https://github.com/ejadahailabs/E-REW-support/raw/main/downloads/sanad-0.6.1.vsix
+            https://github.com/ejadahailabs/E-REW-support/raw/main/downloads/sanad-0.6.3.vsix
           unzip -q sanad.vsix -d sanad
 
       - name: Requirements gate

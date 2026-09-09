@@ -1,7 +1,7 @@
 # Getting started with Sanad — the one-time setup
 
 **Sanad — Engineering Intelligence Workbench**, by Ejadah AI Labs. This page covers
-**Sanad 0.6.1**.
+**Sanad 0.6.3**.
 
 This is the walkthrough you do **once**, per repository. It takes about twenty minutes on
 a repository you already know. At the end of it Sanad knows where your requirements live,
@@ -15,7 +15,7 @@ form at any time and it comes back pre-filled.
 **Technical support:** support@ejadahailabs.com
 
 > **A note on what is finished.** **Requirements** is the mature capability — that is the
-> part to judge Sanad on. **Software** and **Verification** ship in 0.6.1 and run in full,
+> part to judge Sanad on. **Software** and **Verification** ship in 0.6.3 and run in full,
 > but we have not finished testing them, so they are labelled **work in progress**
 > wherever you meet them: in the setup form, in the capability switcher and on the lane
 > itself. Two steps of the setup form (**8 · Standards mapping** and **9 · Views &
@@ -33,7 +33,7 @@ form at any time and it comes back pre-filled.
 
 Your requirement files can have YAML frontmatter or be **plain Markdown with no `---`
 block at all**. Both are supported, and you can mix them — it is declared per requirement
-type. Front matter is optional in 0.6.1; you do not have to convert anything before you
+type. Front matter is optional in 0.6.3; you do not have to convert anything before you
 begin.
 
 ---
@@ -52,7 +52,7 @@ code --install-extension EjadahAILABS.sanad
 newest file from [`downloads/`](downloads/) and either run
 
 ```
-code --install-extension sanad-0.6.1.vsix
+code --install-extension sanad-0.6.3.vsix
 ```
 
 or use the Extensions view → `...` menu → *Install from VSIX...*.

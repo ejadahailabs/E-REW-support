@@ -17,10 +17,9 @@ The extension's source is proprietary and lives in a private repository. Everyth
 need as a *user* is here, and it is public on purpose: you should never need an account,
 an invitation, or our permission to report a problem or read the guide.
 
-**Current release: 0.6.1.** Install it from the
-**[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=EjadahAILABS.sanad)**,
-or download the `.vsix` from **[downloads/](downloads/)** if your organisation cannot
-reach the Marketplace.
+**Current release: 0.6.3.** Download the `.vsix` from **[downloads/](downloads/)**. The
+**[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=EjadahAILABS.sanad)**
+listing is still on 0.6.1 until 0.6.3 is published there.
 
 > **New here? Start with [GETTING-STARTED.md](GETTING-STARTED.md)** — the one-time setup
 > walkthrough: install, open your repository, run setup, read your first run log.
