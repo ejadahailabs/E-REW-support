@@ -432,21 +432,40 @@ product could produce. Silence with a stated reason, never a guessed number.
 
 ---
 
-## Step 8 — Narrow the view to what you are working on
+## Step 8 — Choose the capability you are working in
 
-Run **Sanad: Show Capability...** and pick one:
+The Sanad explorer's **first title-bar button** is the capability chooser. It sits exactly where
+*Show Capability...* used to, and it is now **Sanad: Select Capability...** — same place, wider
+meaning. The explorer's title changes to whichever capability you pick.
 
-| Capability | What the tree narrows to | State |
+The picker's first group is **Capability**, six of them, in this order:
+
+| Capability | What choosing it gives you | State |
 |---|---|---|
-| **All** | Every artifact kind — the default | — |
-| **Requirements** | System requirements, HLRs, LLRs, component and interface requirements, data dictionaries | Mature |
-| **Software** | Architecture, design and implementation artifacts, and the Code Index; opens the **Software Trace** view | **Work in progress** |
-| **Verification** | Test cases and results at every level; opens the **Verification Coverage** view | **Work in progress** |
-| **Review** | Baselines | Planned — no engines yet |
-| **Systems** | Design, ICDs and hazards | Planned — no engines yet |
+| **Sanad Requirements** | The requirement explorer and the authoring form — the corpus in this repository | Build in progress |
+| **Sanad SysML** | A project of SysML v2 files: the containment tree, the palette, the properties and the text of the model | Build in progress |
+| **SW Design** | The software side of the same project, over the same files and the same engine | Build in progress |
+| **SW Implementation** | Nothing is configured behind it yet, and the explorer says so | Planned |
+| **Review** | The request on the branch you are on, and every artifact in it with its own status. It opens its **own** view and shares no state with Requirements | Build in progress |
+| **SW Ver/Validation** | Nothing is configured behind it yet, and the explorer says so | Planned |
 
-A work-in-progress capability says *work in progress* in the picker. It is a tag, never a
-switch: what ships runs in full.
+Requirements is one of the six, not the frame the others hang off. A **planned** capability says
+*planned* in the picker and leaves one line in the tree saying nothing is configured behind it —
+never an empty tree you have to interpret for yourself.
+
+Pick **Sanad SysML** or **SW Design** and two things change. The explorer's top row becomes
+`▾ Sanad SysML` (or `▾ SW Design`), marked *select capability* — the same choice made visible, so
+you never have to hover a title-bar icon to see where you are; clicking that row re-opens the
+picker. And a second title-bar button appears, **Sanad: Open Design**, which opens the design
+panel. The panel has no chooser of its own and says so: two choosers for one choice is two places
+for it to disagree. If that capability has no design root declared yet, the explorer offers its
+setup instead of a file list, and nothing is written until you press Create.
+
+Below the six, under **Narrow Requirements to**, sit the artifact lanes your repository has
+switched on. That is the older and narrower sense of the word, and it still does what it always
+did: it narrows the requirement tree to one artifact kind, and a lane with a view of its own
+opens it — **Software** opens **Software Trace**, **Verification** opens **Verification
+Coverage**. A repository that declares no lanes gets the six and no second group.
 
 The Software and Verification lanes show your files in the directories they are really in,
 not as a flat list. `*.trace` files are not listed in either lane — a trace file declares
@@ -455,7 +474,7 @@ bindings for Sanad to read, it is not an artifact you browse.
 There is also **Sanad: Work On...**, which scopes the explorer to a single work item and
 what it touches, in two lanes, so a change and its evidence sit side by side.
 
-> *Screenshot placeholder — the capability picker, with the WIP tags visible.*
+> *Screenshot placeholder — the capability picker open, with its two groups.*
 
 ---
 
