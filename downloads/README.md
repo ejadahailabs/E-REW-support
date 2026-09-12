@@ -10,9 +10,10 @@ folder is ahead of it today:
 **[marketplace.visualstudio.com/items?itemName=EjadahAILABS.sanad](https://marketplace.visualstudio.com/items?itemName=EjadahAILABS.sanad)**
 
 `e-rew-test-build.vsix` sits beside the release as the **rolling test-build slot**,
-described in the next section. It currently holds the 0.6.3 release build itself, so the
-two files are byte-identical today — but the slot is overwritten without notice and the
-release file is not, which is why the release is the one to install.
+described in the next section. It now holds a build of `main` taken **after** the 0.6.3
+release (`Sanad@81bb6f4e`), so it is ahead of `sanad-0.6.3.vsix` — but the slot is
+overwritten without notice and the release file is not, which is why the release is the
+one to install unless you are testing.
 
 **New to Sanad?** The one-time setup walkthrough is
 **[GETTING-STARTED.md](../GETTING-STARTED.md)** — install, open your repository, run setup,
@@ -24,20 +25,26 @@ run the first analysis.
 
 **`e-rew-test-build.vsix` is the test build.** It is the rolling **pre-release candidate**
 built from `main`: it is overwritten every round, the file name and URL never change, and it
-is not itself a release. **It now holds the 0.6.3 release build** (`Sanad@f8b2e70`, tag
-`v0.6.3`) — byte-identical to `sanad-0.6.3.vsix`, so anyone left on the slot from the last
-round is on the release rather than behind it.
+is not itself a release. **It now holds a build of `Sanad@81bb6f4e`** — `main` after the
+0.6.3 tag. Its version stamp reads **0.6.3**, the same number as the release, because no
+version was bumped and no tag was cut for it; the checksum below is what tells the two
+apart. **0.6.3 remains the current release.**
 
 ```
 curl -LO https://github.com/ejadahailabs/E-REW-support/raw/main/downloads/e-rew-test-build.vsix
-code --install-extension e-rew-test-build.vsix   # then quit VS Code fully (Ctrl+Q)
+code --install-extension e-rew-test-build.vsix --force   # then quit VS Code fully (Ctrl+Q)
 ```
 
+**`--force` is needed this round** because the slot's version stamp is the same 0.6.3 you
+already have installed, and VS Code skips an install of a version it thinks is already
+there.
+
 **Testing? The most recent round's guide is
-[`TEST-GUIDE-Sanad@ebc57d00.md`](TEST-GUIDE-Sanad@ebc57d00.md)** — install steps, the
+[`TEST-GUIDE-Sanad@81bb6f4e.md`](TEST-GUIDE-Sanad@81bb6f4e.md)** — install steps, the
 one-line AI check, and every acceptance-test row that build can run, copied from the feature
-test documents, with the rows it cannot run named and explained. Everything it covers is in
-0.6.3; the release adds the work listed in its row below, which that guide predates.
+test documents, with the rows it cannot run named and explained. It covers the **model
+editor** (42 rows, new in this build) together with the canvas, the SysML v2 reader and the
+shape palette — 127 rows in all.
 
 The slot's checksum is also a file beside it — [`e-rew-test-build.vsix.sha256`](e-rew-test-build.vsix.sha256) —
 so `sha256sum -c e-rew-test-build.vsix.sha256` checks a download without reading this table.
@@ -66,7 +73,8 @@ current.
 
 | Built from | Date | SHA-256 |
 |---|---|---|
-| **RELEASE `sanad-0.6.3.vsix`** (from tag `v0.6.3` @ `f8b2e70` — **the current release, and what the test-build slot now holds**). Over the 0.6.1 release it carries everything the slot builds below carried, and adds the release's own work. **A requirement card you can keep.** Every card — hovering an id in Markdown, in a C or C++ comment, in a pytest marker or docstring — now opens as **Requirement** (id, title, type, status, and the statement itself, which the card used to leave out) and then **Traceability** (criticality and verification, then the Uplinks, Downlinks, Implements and Verifies lanes). **Pin** puts that card in a window of its own that stays when the mouse moves away, one tab per requirement, and **Float** does the same for a card on a Workspace canvas — one opener, so floating a card you already pinned brings that window forward rather than opening a second one. **Every export opens with an index** of its own sections, nested as its headings are, every line a link; and the HTML export is now drawn by the same renderer the panels use, so tables keep their alignment, lists stay lists, and the file you send a reviewer reads the way the requirement reads on screen. **"Who last changed this" is read from your Git history** — the author, the day and the commit that did it, with the line always naming which record it read (*per git*, or *per document field*), and an edit you have not committed reading **uncommitted (you)** rather than guessing. **A Workspace now remembers the session**: the editors you had open, at their lines, and the cards you had floating — addresses only, never a copy of anything you wrote — with **Close Workspace**, **Switch Workspace** and **Copy Workspace to Branch…** in the palette, and a Workspace tied to the branch it was made on. And three views that opened blank whenever there was something to show — **Verification Coverage**, **Software Trace** and **Impact of a Requirement** — now draw their rows, with their filters, their click-through and their exports. **Expires 2026-10-24.** | 2026-09-09 | `00ea9b03ab74779188e1eb9661cd14a69e6a46794a478e7775980edff805a6db` |
+| test-build slot `Sanad@81bb6f4e` — **the newest build in this folder, ahead of the 0.6.3 release.** Its version stamp reads 0.6.3 because it is a build of `main` taken after that tag; no new version has been released and no tag was cut for it. **Its test guide is [`TEST-GUIDE-Sanad@81bb6f4e.md`](TEST-GUIDE-Sanad@81bb6f4e.md).** It carries **everything in the 0.6.3 release** — the row below — and adds **the model editor**, slices E1–E9. **A folder of `.sysml` files opens as one project.** Declare `design: roots:` in your `config.yaml` and **`Sanad: Open Design`** draws every element every file under that root declares as a **containment tree**, with a **properties inspector** beside it that shows every field the notation gives that element — a value the notation cannot take is refused naming the field and the reason, and the file is left byte-for-byte what it was. A `.sysml` file **outside** every declared root is not read at all, and there is no default root: with no `design:` block Sanad reads no project and says nothing about one. **The palette, the inspector, the quick actions and the context menu are one operation set** — the same connection made three ways produces three byte-identical files, and all four surfaces refuse a construct outside the subset in the same words, naming the construct rather than calling your text invalid SysML. **A view is a file.** One tab per `view` usage under `<root>/views/`, **`Sanad: New View…`** costs one new file and changes **no package file**, and the arrangement you drag rides at the end of that view file as a metadata package annotating elements by qualified name — **no coordinate is ever written into a model element**. Delete the layout package and the picture still draws, from the computed arrangement. **Two deletions, two blast radii:** *remove from the view* touches only the view file; *remove from the model* shows you **every element and every view that names it before anything is written**, and undo returns every file to what it was. **The requirement package is generated** from your Markdown corpus — marked generated, refusing to be typed into with the Markdown file to edit named instead, and byte-identical when regenerated with no corpus change. **The assistant is a peer, not a privileged path:** every proposal is shown before anything is written, a multi-item proposal is accepted item by item with each item saying where it came from, an undecided item writes nothing, and the set of operations the assistant may propose is the same set the hand can reach. **And our own CI reads every file this writes with the OMG SysML v2 Pilot Implementation 0.61.0 — 0 errors, 0 warnings** — while nothing in the product needs a Java runtime. Also on this build: a workspace file that will not parse as YAML is now **named on the CLI, the runner and the gate** instead of being silent there #915. The **review capability** has begun landing (`Sanad: Open Review` and two AI-draft commands) and is **not ready to test** — it has no acceptance rows yet. | 2026-09-12 | `847b648cf9dc38908836f10f012f9f51f4720750da82b4c35d6e4198ea795aec` |
+| **RELEASE `sanad-0.6.3.vsix`** (from tag `v0.6.3` @ `f8b2e70` — **the current release**; the slot has since moved on to the row above). Over the 0.6.1 release it carries everything the slot builds below carried, and adds the release's own work. **A requirement card you can keep.** Every card — hovering an id in Markdown, in a C or C++ comment, in a pytest marker or docstring — now opens as **Requirement** (id, title, type, status, and the statement itself, which the card used to leave out) and then **Traceability** (criticality and verification, then the Uplinks, Downlinks, Implements and Verifies lanes). **Pin** puts that card in a window of its own that stays when the mouse moves away, one tab per requirement, and **Float** does the same for a card on a Workspace canvas — one opener, so floating a card you already pinned brings that window forward rather than opening a second one. **Every export opens with an index** of its own sections, nested as its headings are, every line a link; and the HTML export is now drawn by the same renderer the panels use, so tables keep their alignment, lists stay lists, and the file you send a reviewer reads the way the requirement reads on screen. **"Who last changed this" is read from your Git history** — the author, the day and the commit that did it, with the line always naming which record it read (*per git*, or *per document field*), and an edit you have not committed reading **uncommitted (you)** rather than guessing. **A Workspace now remembers the session**: the editors you had open, at their lines, and the cards you had floating — addresses only, never a copy of anything you wrote — with **Close Workspace**, **Switch Workspace** and **Copy Workspace to Branch…** in the palette, and a Workspace tied to the branch it was made on. And three views that opened blank whenever there was something to show — **Verification Coverage**, **Software Trace** and **Impact of a Requirement** — now draw their rows, with their filters, their click-through and their exports. **Expires 2026-10-24.** | 2026-09-09 | `00ea9b03ab74779188e1eb9661cd14a69e6a46794a478e7775980edff805a6db` |
 
 Superseded builds, kept for the record — **do not install these**:
 
